@@ -53,7 +53,7 @@
                 ws.onerror = ws.onopen = ws.onclose = null
                 ws.close()
             }
-            ws = new WebSocket('ws://localhost:3000')
+            ws = new WebSocket(`ws://${window.location.hostname}:${window.location.port}`)
             ws.onopen = () => {
                 console.log('Connection opened!')
             }
